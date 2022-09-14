@@ -1,11 +1,16 @@
 @charset "UTF-8";
 
 :root {
-    --color1: #eaeaea;
+    /* --color1: #eaeaea;
     --color2: #035e7b;
     --color3: #030027;
     --color4: #B5E5FF;
-    --color5: #002e2c;
+    --color5: #002e2c; */
+    --color1: #dcedff;
+    --color2: #78BC61;
+    --color3: #848FA5;
+    --color4: #18470D;
+    --color5: #323236;
 }
 
 /*html{
@@ -19,20 +24,13 @@
 }
 
 body {
-    background-color: var(--color1);
+    background-color: var(--color5);
     /*display: flex;
     flex-direction: column;
     min-height: 100%;*/
 }
 
-main>a {
-    text-decoration: none;
-}
-
-.external::after {
-    content: '\1F517';
-
-}
+/* CONFIGURAÇÃO HEADER */
 
 header {
     background-color: var(--color2);
@@ -43,17 +41,43 @@ header {
 header>h1 {
     color: var(--color1);
     padding: 10px;
-}
+} 
+
+/* CONFIGURACAO MAIN */
+
 
 main {
-    background-color: var(--color4);
+    background-color: var(--color1);
     max-width: 650px;
     margin: auto;
-    color: var(--color3);
+    color: var(--color4);
     box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.250);
     font-size: 1.1em;
     margin-bottom: 10px;
     border-radius: 0 0 10px 10px;
+}
+
+main h1 {
+    color: var(--color4);
+    text-align: center;
+    padding: 10px;
+}
+
+main picture img {
+    display: block;
+    margin: auto;
+    background-color: var(--color2);
+}
+
+main p {
+    padding: 10px;
+    text-align: justify;
+    text-indent: 30px;
+    line-height: 1.5em;
+}
+
+main a {
+    text-decoration: none;
 }
 
 main p a {
@@ -66,65 +90,59 @@ main p a:hover {
     text-decoration: underline;
 }
 
-main p {
-    padding: 10px;
-    text-align: justify;
-    text-indent: 30px;
-    line-height: 1.5em;
-}
+.external::after {
+    content: '\1F517';
 
-main h1 {
-    color: var(--color3);
-    text-align: center;
-    padding: 10px;
 }
 
 main h2 {
     padding: 10px;
 }
 
-main>picture>img {
-    display: block;
-    margin: auto;
-    background-color: var(--color2);
-}
-
-div h2 {
+section h2 {
     color: var(--color4);
-    background-color: var(--color2);
+    background-color: var(--color1);
     border-radius: 10px 10px 0 0;
 }
 
-div h3{
+section h3{
     color:var(--color4);
-    background-color: var(--color2);
+    background-color: var(--color1);
     padding: 5px;
     box-shadow: inset 1px 0px 5px var(--color1);
 }
 
-div ul {
+section ul {
     list-style-position: inside;
     list-style-type: none;
     background-color: var(--color5);
 }
-div li{
+
+
+
+
+
+
+section li{
     padding: 3px;
 }
 
-div a {
+section a {
     text-decoration: none;
     color: var(--color4);
     margin: 5px;
     padding: 2px;
 }
 
-div a:hover {
+section a:hover {
     background-color: var(--color4);
     color: var(--color2);
     border-radius: 8px;
     transition-duration: 0.3s;
 
 }
+
+/* configuracao footer */
 
 footer {
     padding: 5px 0px 10px 0px;
