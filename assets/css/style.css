@@ -1,22 +1,12 @@
 @charset "UTF-8";
 
 :root {
-    /* --color1: #eaeaea;
-    --color2: #035e7b;
-    --color3: #030027;
-    --color4: #B5E5FF;
-    --color5: #002e2c; */
-    --color1: #dcedff;
-    --color2: #78BC61;
-    --color3: #848FA5;
-    --color4: #18470D;
-    --color5: #323236;
+    --color1: #431466;
+    --color2: #482861;
+    --color3: #8147AD;
+    --color4: #A75CE0;
+    --color5: #C9A3E6;
 }
-
-/*html{
-    height: 100%;
-    min-height: 100%;
-}*/
 * {
     margin: 0px;
     padding: 0px;
@@ -24,7 +14,7 @@
 }
 
 body {
-    background-color: var(--color1);
+    background-color: white;
     /*display: flex;
     flex-direction: column;
     min-height: 100%;*/
@@ -47,7 +37,7 @@ header>h1 {
 
 
 main {
-    background-color: var(--color5);
+    background-color: var(--color1);
     max-width: 650px;
     margin: auto;
     color: var(--color4);
