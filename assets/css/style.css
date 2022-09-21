@@ -82,7 +82,7 @@ main section:nth-child(3){
 }
 
 main section div{
-    background-color: rgb(54, 54, 58);
+    background-color: #012a35;
     padding: 32px;
     padding-top: 24px;
     border-radius: 8px;
