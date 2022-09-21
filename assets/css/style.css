@@ -66,6 +66,7 @@ main section{
     border-radius: 10px;
     animation: fromBottom .7s backwards;
     background-image: linear-gradient(90deg, #01677e, #01677e);
+    
 }
 
 main section:nth-child(1){
@@ -104,7 +105,6 @@ main section div p{
 main section div ul{
  
     list-style: none;
-    margin-left: 15px;
     margin-top: 24px;
 
 }
