@@ -2,8 +2,6 @@
 
 > Portfólio
 
-![preview](./.github/laravinicius.github.io_.png)
-
 [🔗 Clique aqui para acessar](https://laravinicius.github.io)
 
 ## 👨‍💻 Sobre
