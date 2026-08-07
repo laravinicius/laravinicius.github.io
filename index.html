@@ -3,134 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinicius Lara</title>
+    <title>Vinicius Felipe da Silva Lara — Analista de TI / Desenvolvedor Full-stack</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+    <button id="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
+        <span class="icon-sun" aria-hidden="true">&#x2600;</span>
+        <span class="icon-moon" aria-hidden="true">&#x1F319;</span>
+    </button>
+
     <header>
-        <div>
+        <div class="avatar">
             <img src="assets/images/vinicius-228.jpeg" alt="Foto de perfil de Vinicius Felipe da Silva Lara">
         </div>
+        <h1>Vinicius Felipe da Silva Lara</h1>
+        <p>Analista de TI / Desenvolvedor Full-stack</p>
     </header>
 
     <main>
         <section>
             <div>
-                <h2>Meus projetos</h2>
-                <h3>Projetos que desenvolvi durante meus estudos com HTML, CSS e JavaScript</h3>
+                <h2>Sobre mim</h2>
+                <p>
+                    Atuo como analista de TI e desenvolvedor full-stack, cuidando de infraestrutura, redes e sistemas
+                    internos em produção. Desenvolvo e mantenho ferramentas web (PHP/Laravel/React), administro a
+                    infraestrutura da empresa e os servidores, e implanto automações e boas práticas de segurança.
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Projetos profissionais</h2>
                 <ul class="project-list">
-                        <li>
-                            <a href="https://laravinicius.github.io/NLW-Copa/" target="_blank">
-                                &#x1F517 NLW-Copa
-                            </a>
-                            <p>
-                                Projeto de um calendário dos jogos da Copa do mundo, feito na NLW 10 da <a href="https://www.rocketseat.com.br/" target="_blank">&#x1F517 Rocketseat</a>.
-                            </p>
-                        </li>
-                        <li>
-                            <a href="https://laravinicius.github.io/NLW-eSports/" target="_blank">
-                                &#x1F517 NLW-eSports 
-                            </a>
-                            <p>
-                                Projeto de um catálogo de games e streamers, feito na NLW 9 da <a href="https://www.rocketseat.com.br/" target="_blank">&#x1F517 Rocketseat</a>.
-                            </p>
-                        </li>
-                        <li>
-                            <a href="https://laravinicius.github.io/projeto_login/" target="_blank">
-                                &#x1F517 Projeto tela de login
-                            </a>
-                            <p>
-                                Projeto de uma tela de login, que se adapta ao dispositivo no qual é acessado, feito apartir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo </a>.
-                            </p>
-                        </li>
-                        <li>
-                        <a href="https://laravinicius.github.io/projeto_hora_do_dia/" target="_blank">
-                            &#x1F517 Hora do Dia
-                        </a>
+                    <li>
+                        <h3>microgate_caixa</h3>
                         <p>
-                            Projeto que mostra o horário atual com uma imagem de fundo, que muda de forma dinâmica dependendo do horário. Feito apartir do curso de JavaScript do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo </a>.
+                            Sistema de caixa e controle financeiro para a loja, desenvolvido com Laravel + React.
+                            <br>Link público: a confirmar.
                         </p>
                     </li>
                     <li>
-                        <a href="https://laravinicius.github.io/projeto_redes_sociais/" target="_blank">
-                            &#x1F517 Redes Sociais
-                        </a>
+                        <h3>microgate_restrito</h3>
                         <p>
-                            Projeto que simula um celular com as redes sociais, podendo trocar entre elas. Feito apartir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo </a>.
+                            Agendamento de técnicos e controle de KM, com visualização em WebView Android. Desenvolvido em PHP.
+                            <br>Link público: a confirmar.
                         </p>
                     </li>
                     <li>
-                        <a href="https://laravinicius.github.io/projeto-cordel/" target="_blank">
-                            &#x1F517 Cordel Moderno
-                        </a>
+                        <h3>Sistema de caixa diário</h3>
                         <p>
-                            Projeto que ilustra um Cordel de forma moderna. Feito apartir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo </a>.
+                            Sistema de caixa diário para a loja, desenvolvido em PHP e MySQL.
+                            <br>Link público: a confirmar.
                         </p>
                     </li>
                     <li>
-                        <a href="https://laravinicius.github.io/projeto-android" target="_blank">
-                            &#x1F517 Mascote Android
-                        </a>
+                        <h3>topologia</h3>
                         <p>
-                            Projeto de um site simples que conta um pouco sobre a história do mascote do Android. Feito apartir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo </a>.
-                        </p>
-                    </li>
-                    
-                </ul>
-            </div>
-        </section>
-        
-        <section>
-            <div>
-                <h2>Meus Estudos</h2>
-                <h3>Lista de estudos em HTML, CSS e JavaScript.</h3>
-                
-                <ul>
-                    <li>
-                        <a href="https://github.com/laravinicius/HTML-CSS" target="_blank">
-                            &#x1F517 HTML5 e CSS3
-                        </a>
-                        <p>
-                            Estudos em HTML5 e CSS3 feitos com o professor Gustavo Guanabara do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo </a>.
+                            Ferramenta de mapeamento de infraestrutura em Node.js + Express, com SSE e arquitetura multi-tenant.
+                            <br>Link público: a confirmar.
                         </p>
                     </li>
                     <li>
-                        <a href="https://github.com/laravinicius/Javascript_cursoemvideo" target="_blank">
-                            &#x1F517 JavaScript
-                        </a>
+                        <h3>Stack de atendimento via WhatsApp</h3>
                         <p>
-                            Estudos em JavaScript feitos com o professor Gustavo Guanabara do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo </a>.
+                            Automação de atendimento com Evolution API + Chatwoot + Typebot.
+                            <br>Link público: a confirmar.
                         </p>
                     </li>
                     <li>
-                        <a href="https://github.com/laravinicius/Curso_JS" target="_blank">
-                            &#x1F517 JavaScript
-                        </a>
+                        <h3>Simulações de phishing internas</h3>
                         <p>
-                            Estudos avançados em JavaScript com o professor Luiz Otávio Miranda feitos apartir do <a href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/" target="_blank">&#x1F517 Curso de Javascript e TypeScript do básico ao avançado 2022</a>.
+                            Campanhas de conscientização de segurança com GoPhish + Cloudflare Tunnel.
+                            <br>Link público: a confirmar.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>VPN site-to-site com pfSense</h3>
+                        <p>
+                            VPN IPsec entre matriz e filial, garantindo o tráfego seguro entre as unidades.
+                            <br>Link público: a confirmar.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>PharmaFlow</h3>
+                        <p>
+                            Sistema de gestão para farmácia, em migração de Electron para Tauri v2 (Rust).
+                            <br>Link público: a confirmar.
                         </p>
                     </li>
                 </ul>
             </div>
         </section>
+
         <section>
             <div>
-                <h2>Redes Sociais</h2>
+                <h2>Infraestrutura &amp; Homelab</h2>
+                <p>
+                    Stack self-hosted que utilizo para estudos, testes e automações do dia a dia:
+                </p>
+                <ul class="skill-list">
+                    <li>Proxmox</li>
+                    <li>Docker</li>
+                    <li>MariaDB</li>
+                    <li>Nginx Proxy Manager</li>
+                    <li>MikroTik / WireGuard</li>
+                    <li>pfSense (VPN IPsec site‑to‑site)</li>
+                    <li>Active Directory / PowerShell</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Projetos acadêmicos</h2>
+                <ul class="project-list">
+                    <li>
+                        <h3>SalaReserva</h3>
+                        <p>
+                            Sistema de reserva de salas em C# (WinForms), com comunicação TCP e persistência em SQLite.
+                            <br>Link público: a confirmar.
+                        </p>
+                    </li>
+                    <li>
+                        <h3>CornHub</h3>
+                        <p>
+                            Sistema de reserva de cinema desenvolvido em PHP com arquitetura MVC.
+                            <br>Link público: a confirmar.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <h2>Skills</h2>
+                <h3>Backend</h3>
+                <ul class="skill-list">
+                    <li>PHP</li>
+                    <li>Laravel</li>
+                    <li>Node.js</li>
+                    <li>Express</li>
+                    <li>C#</li>
+                </ul>
+                <h3>Frontend</h3>
+                <ul class="skill-list">
+                    <li>React</li>
+                    <li>JavaScript</li>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                </ul>
+                <h3>Desktop</h3>
+                <ul class="skill-list">
+                    <li>Rust</li>
+                    <li>Tauri</li>
+                </ul>
+                <h3>Banco de dados</h3>
+                <ul class="skill-list">
+                    <li>MySQL</li>
+                    <li>MariaDB</li>
+                    <li>SQLite</li>
+                </ul>
+                <h3>Infraestrutura</h3>
+                <ul class="skill-list">
+                    <li>Docker</li>
+                    <li>Proxmox</li>
+                    <li>Nginx Proxy Manager</li>
+                    <li>pfSense</li>
+                    <li>MikroTik</li>
+                    <li>WireGuard</li>
+                    <li>Active Directory / PowerShell</li>
+                </ul>
+                <h3>Segurança</h3>
+                <ul class="skill-list">
+                    <li>GoPhish</li>
+                    <li>Conscientização de segurança</li>
+                </ul>
+                <h3>DevOps / AI tooling</h3>
+                <ul class="skill-list">
+                    <li>Claude Code</li>
+                    <li>opencode</li>
+                </ul>
+            </div>
+        </section>
+
+        <details>
+            <summary>Projetos de estudo (menos em destaque)</summary>
+            <section>
+                <div>
+                    <h2>Meus projetos de estudo</h2>
+                    <h3>Projetos desenvolvidos durante meus estudos com HTML, CSS e JavaScript</h3>
+                    <ul class="project-list">
+                        <li>
+                            <a href="https://laravinicius.github.io/NLW-Copa/" target="_blank">&#x1F517 NLW-Copa</a>
+                            <p>Projeto de um calendário dos jogos da Copa do mundo, feito na NLW 10 da <a href="https://www.rocketseat.com.br/" target="_blank">&#x1F517 Rocketseat</a>.</p>
+                        </li>
+                        <li>
+                            <a href="https://laravinicius.github.io/NLW-eSports/" target="_blank">&#x1F517 NLW-eSports</a>
+                            <p>Projeto de um catálogo de games e streamers, feito na NLW 9 da <a href="https://www.rocketseat.com.br/" target="_blank">&#x1F517 Rocketseat</a>.</p>
+                        </li>
+                        <li>
+                            <a href="https://laravinicius.github.io/projeto_login/" target="_blank">&#x1F517 Projeto tela de login</a>
+                            <p>Projeto de uma tela de login, que se adapta ao dispositivo no qual é acessado, feito a partir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        </li>
+                        <li>
+                            <a href="https://laravinicius.github.io/projeto_hora_do_dia/" target="_blank">&#x1F517 Hora do Dia</a>
+                            <p>Projeto que mostra o horário atual com uma imagem de fundo, que muda de forma dinâmica dependendo do horário. Feito a partir do curso de JavaScript do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        </li>
+                        <li>
+                            <a href="https://laravinicius.github.io/projeto_redes_sociais/" target="_blank">&#x1F517 Redes Sociais</a>
+                            <p>Projeto que simula um celular com as redes sociais, podendo trocar entre elas. Feito a partir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        </li>
+                        <li>
+                            <a href="https://laravinicius.github.io/projeto-cordel/" target="_blank">&#x1F517 Cordel Moderno</a>
+                            <p>Projeto que ilustra um Cordel de forma moderna. Feito a partir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        </li>
+                        <li>
+                            <a href="https://laravinicius.github.io/projeto-android" target="_blank">&#x1F517 Mascote Android</a>
+                            <p>Projeto de um site simples que conta um pouco sobre a história do mascote do Android. Feito a partir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <div>
+                    <h2>Meus estudos</h2>
+                    <h3>Lista de estudos em HTML, CSS e JavaScript.</h3>
+                    <ul>
+                        <li>
+                            <a href="https://github.com/laravinicius/HTML-CSS" target="_blank">&#x1F517 HTML5 e CSS3</a>
+                            <p>Estudos em HTML5 e CSS3 feitos com o professor Gustavo Guanabara do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        </li>
+                        <li>
+                            <a href="https://github.com/laravinicius/javascript_cursoemvideo" target="_blank">&#x1F517 JavaScript</a>
+                            <p>Estudos em JavaScript feitos com o professor Gustavo Guanabara do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        </li>
+                        <li>
+                            <a href="https://github.com/laravinicius/Curso_JS" target="_blank">&#x1F517 JavaScript</a>
+                            <p>Estudos avançados em JavaScript com o professor Luiz Otávio Miranda, feitos a partir do <a href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/" target="_blank">&#x1F517 Curso de JavaScript e TypeScript do básico ao avançado 2022</a>.</p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </details>
+
+        <section>
+            <div>
+                <h2>Contato</h2>
+                <p>
+                    <a href="mailto:viniciusfelipe501@hotmail.com">viniciusfelipe501@hotmail.com</a>
+                </p>
                 <ul class="socialMedia">
                     <li>
                         <a href="https://github.com/laravinicius" target="_blank">
-                            <img src="assets/images/icone-github.png" alt="Link para meu Github">
-                            
+                            <img src="assets/images/icone-github.png" alt="Link para meu GitHub">
                         </a>
                     </li>
                     <li>
                         <a href="https://www.linkedin.com/in/vinicius-lara-3017771b5/" target="_blank">
-                            <img src="assets/images/icone-linkedin.png" alt="Link para meu Linkedin">
+                            <img src="assets/images/icone-linkedin.png" alt="Link para meu LinkedIn">
                         </a>
                     </li>
                     <li>
                         <a href="https://www.instagram.com/u__vine/" target="_blank">
-                            <img src="assets/images/icone-instagram.png" alt="Link para meu instagram">
+                            <img src="assets/images/icone-instagram.png" alt="Link para meu Instagram">
                         </a>
                     </li>
                     <li>
@@ -142,8 +280,6 @@
             </div>
         </section>
     </main>
-
-    
-    
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
