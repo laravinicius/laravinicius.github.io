@@ -27,4 +27,60 @@
             localStorage.setItem(STORAGE_KEY, next);
         });
     }
+
+    // ===== terminal typing =====
+
+    const typedEl = document.getElementById('typed-role');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    if (!typedEl || prefersReducedMotion) {
+        return;
+    }
+
+    const SEQUENCES = [
+        'Analista de TI / Desenvolvedor Full-stack',
+        'PHP · Laravel · React',
+        'Node.js · Express · SSE',
+        'C# · WinForms · TCP',
+        'Rust · Tauri v2',
+        'Docker · Proxmox · Nginx',
+        'pfSense · MikroTik · WireGuard'
+    ];
+
+    const TYPE_MS = 45;
+    const DELETE_MS = 22;
+    const HOLD_MS = 2400;
+    const FIRST_HOLD_MS = 3200;
+
+    let seqIndex = 0;
+    let charIndex = SEQUENCES[0].length;
+
+    function tick() {
+        const current = SEQUENCES[seqIndex];
+        const holdMs = seqIndex === 0 ? FIRST_HOLD_MS : HOLD_MS;
+
+        if (charIndex < current.length) {
+            charIndex++;
+            typedEl.textContent = current.slice(0, charIndex);
+            setTimeout(tick, TYPE_MS);
+        } else {
+            setTimeout(erase, holdMs);
+        }
+    }
+
+    function erase() {
+        const current = SEQUENCES[seqIndex];
+
+        if (charIndex > 0) {
+            charIndex--;
+            typedEl.textContent = current.slice(0, charIndex);
+            setTimeout(erase, DELETE_MS);
+        } else {
+            seqIndex = (seqIndex + 1) % SEQUENCES.length;
+            setTimeout(tick, TYPE_MS);
+        }
+    }
+
+    typedEl.textContent = '';
+    setTimeout(tick, 600);
 })();

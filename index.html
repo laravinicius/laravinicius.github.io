@@ -4,282 +4,504 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vinicius Felipe da Silva Lara — Analista de TI / Desenvolvedor Full-stack</title>
+    <meta name="description" content="Portfólio de Vinicius Felipe da Silva Lara — analista de TI e desenvolvedor full-stack: sistemas internos, infraestrutura, homelab e automação.">
+    <link rel="icon" href="assets/images/favicon.ico">
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('laravinicius-theme');
+                if (t !== 'light' && t !== 'dark') {
+                    t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                }
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) {}
+        })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <button id="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
-        <span class="icon-sun" aria-hidden="true">&#x2600;</span>
-        <span class="icon-moon" aria-hidden="true">&#x1F319;</span>
+    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
     </button>
 
-    <header>
-        <div class="avatar">
-            <img src="assets/images/vinicius-228.jpeg" alt="Foto de perfil de Vinicius Felipe da Silva Lara">
-        </div>
-        <h1>Vinicius Felipe da Silva Lara</h1>
-        <p>Analista de TI / Desenvolvedor Full-stack</p>
-    </header>
+    <main class="main">
 
-    <main>
-        <section>
-            <div>
-                <h2>Sobre mim</h2>
-                <p>
+        <!-- ===== hero: terminal ===== -->
+        <section class="terminal-hero" aria-label="Apresentação">
+            <div class="terminal-avatar">
+                <img src="assets/images/vinicius-228.jpeg" alt="Foto de perfil de Vinicius Felipe da Silva Lara">
+            </div>
+            <div class="terminal-header">
+                <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+                <span class="terminal-title">vinicius@laravinicius.github.io:~</span>
+            </div>
+            <div class="terminal-body">
+                <p class="terminal-prompt"><span class="cmd">whoami</span></p>
+                <h1 class="terminal-name">Vinicius Felipe da Silva Lara</h1>
+                <p class="terminal-prompt"><span class="cmd">role</span></p>
+                <p class="terminal-output">
+                    <span class="terminal-typed" id="typed-role">Analista de TI / Desenvolvedor Full-stack</span><span class="cursor" aria-hidden="true"></span>
+                </p>
+                <p class="sr-only">Analista de TI e desenvolvedor full-stack.</p>
+                <noscript><p class="terminal-output" style="color: var(--text-muted);">PHP · Laravel · React · Node.js · Docker · Proxmox · pfSense</p></noscript>
+            </div>
+        </section>
+
+        <!-- ===== RFC-0001: sobre ===== -->
+        <section class="rfc-section">
+            <header class="rfc-header">
+                <span class="rfc-number">RFC-0001</span>
+                <h2 class="rfc-title">Sobre mim</h2>
+            </header>
+            <div class="rfc-body">
+                <p class="lead">
                     Atuo como analista de TI e desenvolvedor full-stack, cuidando de infraestrutura, redes e sistemas
-                    internos em produção. Desenvolvo e mantenho ferramentas web (PHP/Laravel/React), administro a
-                    infraestrutura da empresa e os servidores, e implanto automações e boas práticas de segurança.
+                    internos em produção.
                 </p>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <h2>Projetos profissionais</h2>
-                <ul class="project-list">
-                    <li>
-                        <h3>microgate_caixa</h3>
-                        <p>
-                            Sistema de caixa e controle financeiro para a loja, desenvolvido com Laravel + React.
-                            <br>Link público: a confirmar.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>microgate_restrito</h3>
-                        <p>
-                            Agendamento de técnicos e controle de KM, com visualização em WebView Android. Desenvolvido em PHP.
-                            <br>Link público: a confirmar.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Sistema de caixa diário</h3>
-                        <p>
-                            Sistema de caixa diário para a loja, desenvolvido em PHP e MySQL.
-                            <br>Link público: a confirmar.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>topologia</h3>
-                        <p>
-                            Ferramenta de mapeamento de infraestrutura em Node.js + Express, com SSE e arquitetura multi-tenant.
-                            <br>Link público: a confirmar.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Stack de atendimento via WhatsApp</h3>
-                        <p>
-                            Automação de atendimento com Evolution API + Chatwoot + Typebot.
-                            <br>Link público: a confirmar.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>Simulações de phishing internas</h3>
-                        <p>
-                            Campanhas de conscientização de segurança com GoPhish + Cloudflare Tunnel.
-                            <br>Link público: a confirmar.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>VPN site-to-site com pfSense</h3>
-                        <p>
-                            VPN IPsec entre matriz e filial, garantindo o tráfego seguro entre as unidades.
-                            <br>Link público: a confirmar.
-                        </p>
-                    </li>
-                    <li>
-                        <h3>PharmaFlow</h3>
-                        <p>
-                            Sistema de gestão para farmácia, em migração de Electron para Tauri v2 (Rust).
-                            <br>Link público: a confirmar.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-        <section>
-            <div>
-                <h2>Infraestrutura &amp; Homelab</h2>
                 <p>
-                    Stack self-hosted que utilizo para estudos, testes e automações do dia a dia:
+                    Desenvolvo e mantenho ferramentas web (PHP/Laravel/React), administro a infraestrutura da empresa e os
+                    servidores, e implanto automações e boas práticas de segurança.
                 </p>
-                <ul class="skill-list">
-                    <li>Proxmox</li>
-                    <li>Docker</li>
-                    <li>MariaDB</li>
-                    <li>Nginx Proxy Manager</li>
-                    <li>MikroTik / WireGuard</li>
-                    <li>pfSense (VPN IPsec site‑to‑site)</li>
-                    <li>Active Directory / PowerShell</li>
-                </ul>
             </div>
         </section>
 
-        <section>
-            <div>
-                <h2>Projetos acadêmicos</h2>
-                <ul class="project-list">
-                    <li>
-                        <h3>SalaReserva</h3>
-                        <p>
-                            Sistema de reserva de salas em C# (WinForms), com comunicação TCP e persistência em SQLite.
-                            <br>Link público: a confirmar.
-                        </p>
+        <!-- ===== RFC-0002: projetos profissionais ===== -->
+        <section class="rfc-section">
+            <header class="rfc-header">
+                <span class="rfc-number">RFC-0002</span>
+                <h2 class="rfc-title">Projetos profissionais</h2>
+            </header>
+            <div class="rfc-body">
+                <ul class="project-grid" role="list">
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">microgate_caixa</h3>
+                            <p class="project-desc">Sistema de caixa e controle financeiro para a loja.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">Laravel</li>
+                                    <li class="tag">React</li>
+                                    <li class="tag">PHP</li>
+                                </ul>
+                                <span class="project-status project-status--internal">interno · sem link público</span>
+                            </div>
+                        </div>
                     </li>
-                    <li>
-                        <h3>CornHub</h3>
-                        <p>
-                            Sistema de reserva de cinema desenvolvido em PHP com arquitetura MVC.
-                            <br>Link público: a confirmar.
-                        </p>
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">microgate_restrito</h3>
+                            <p class="project-desc">Agendamento de técnicos e controle de KM, com visualização em WebView Android.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">PHP</li>
+                                    <li class="tag">WebView Android</li>
+                                </ul>
+                                <span class="project-status project-status--internal">interno · sem link público</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">Sistema de caixa diário</h3>
+                            <p class="project-desc">Sistema de caixa diário para a loja.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">PHP</li>
+                                    <li class="tag">MySQL</li>
+                                </ul>
+                                <span class="project-status project-status--internal">interno · sem link público</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">topologia</h3>
+                            <p class="project-desc">Ferramenta de mapeamento de infraestrutura, com atualizações em tempo real via SSE e arquitetura multi-tenant.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">Node.js</li>
+                                    <li class="tag">Express</li>
+                                    <li class="tag">SSE</li>
+                                </ul>
+                                <span class="project-status project-status--internal">interno · sem link público</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">Atendimento via WhatsApp</h3>
+                            <p class="project-desc">Stack de automação de atendimento com bots e fila de conversas.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">Evolution API</li>
+                                    <li class="tag">Chatwoot</li>
+                                    <li class="tag">Typebot</li>
+                                </ul>
+                                <span class="project-status project-status--internal">interno · sem link público</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">Simulações de phishing internas</h3>
+                            <p class="project-desc">Campanhas de conscientização de segurança para os colaboradores.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">GoPhish</li>
+                                    <li class="tag">Cloudflare Tunnel</li>
+                                </ul>
+                                <span class="project-status project-status--internal">interno · sem link público</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">VPN site-to-site com pfSense</h3>
+                            <p class="project-desc">VPN IPsec entre matriz e filial, garantindo o tráfego seguro entre as unidades.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">pfSense</li>
+                                    <li class="tag">IPsec</li>
+                                </ul>
+                                <span class="project-status project-status--internal">interno · sem link público</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">PharmaFlow</h3>
+                            <p class="project-desc">Sistema de gestão para farmácia, em migração de Electron para Tauri v2.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">Rust</li>
+                                    <li class="tag">Tauri v2</li>
+                                </ul>
+                                <span class="project-status project-status--internal">link a confirmar</span>
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section>
-            <div>
-                <h2>Skills</h2>
-                <h3>Backend</h3>
-                <ul class="skill-list">
-                    <li>PHP</li>
-                    <li>Laravel</li>
-                    <li>Node.js</li>
-                    <li>Express</li>
-                    <li>C#</li>
-                </ul>
-                <h3>Frontend</h3>
-                <ul class="skill-list">
-                    <li>React</li>
-                    <li>JavaScript</li>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                </ul>
-                <h3>Desktop</h3>
-                <ul class="skill-list">
-                    <li>Rust</li>
-                    <li>Tauri</li>
-                </ul>
-                <h3>Banco de dados</h3>
-                <ul class="skill-list">
-                    <li>MySQL</li>
-                    <li>MariaDB</li>
-                    <li>SQLite</li>
-                </ul>
-                <h3>Infraestrutura</h3>
-                <ul class="skill-list">
-                    <li>Docker</li>
-                    <li>Proxmox</li>
-                    <li>Nginx Proxy Manager</li>
-                    <li>pfSense</li>
-                    <li>MikroTik</li>
-                    <li>WireGuard</li>
-                    <li>Active Directory / PowerShell</li>
-                </ul>
-                <h3>Segurança</h3>
-                <ul class="skill-list">
-                    <li>GoPhish</li>
-                    <li>Conscientização de segurança</li>
-                </ul>
-                <h3>DevOps / AI tooling</h3>
-                <ul class="skill-list">
-                    <li>Claude Code</li>
-                    <li>opencode</li>
+        <!-- ===== RFC-0003: infra & homelab ===== -->
+        <section class="rfc-section">
+            <header class="rfc-header">
+                <span class="rfc-number">RFC-0003</span>
+                <h2 class="rfc-title">Infraestrutura &amp; Homelab</h2>
+            </header>
+            <div class="rfc-body">
+                <p>Stack self-hosted que utilizo para estudos, testes e automações do dia a dia:</p>
+                <ul class="infra-grid" role="list">
+                    <li class="infra-card">
+                        <span class="infra-icon" aria-hidden="true">🖥️</span>
+                        <span class="infra-name">Proxmox</span>
+                        <span class="infra-desc">Virtualização de servidores e VMs</span>
+                    </li>
+                    <li class="infra-card">
+                        <span class="infra-icon" aria-hidden="true">🐳</span>
+                        <span class="infra-name">Docker</span>
+                        <span class="infra-desc">Containers para serviços self-hosted</span>
+                    </li>
+                    <li class="infra-card">
+                        <span class="infra-icon" aria-hidden="true">🗃️</span>
+                        <span class="infra-name">MariaDB</span>
+                        <span class="infra-desc">Banco de dados em produção</span>
+                    </li>
+                    <li class="infra-card">
+                        <span class="infra-icon" aria-hidden="true">🌐</span>
+                        <span class="infra-name">Nginx Proxy Manager</span>
+                        <span class="infra-desc">Proxy reverso e certificados</span>
+                    </li>
+                    <li class="infra-card">
+                        <span class="infra-icon" aria-hidden="true">🔀</span>
+                        <span class="infra-name">MikroTik / WireGuard</span>
+                        <span class="infra-desc">Roteamento e VPN</span>
+                    </li>
+                    <li class="infra-card">
+                        <span class="infra-icon" aria-hidden="true">🛡️</span>
+                        <span class="infra-name">pfSense</span>
+                        <span class="infra-desc">Firewall e VPN IPsec site-to-site</span>
+                    </li>
+                    <li class="infra-card">
+                        <span class="infra-icon" aria-hidden="true">🏢</span>
+                        <span class="infra-name">Active Directory</span>
+                        <span class="infra-desc">Diretório e PowerShell</span>
+                    </li>
                 </ul>
             </div>
         </section>
 
-        <details>
-            <summary>Projetos de estudo (menos em destaque)</summary>
-            <section>
+        <!-- ===== RFC-0004: projetos acadêmicos ===== -->
+        <section class="rfc-section">
+            <header class="rfc-header">
+                <span class="rfc-number">RFC-0004</span>
+                <h2 class="rfc-title">Projetos acadêmicos</h2>
+            </header>
+            <div class="rfc-body">
+                <ul class="project-grid" role="list">
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">SalaReserva</h3>
+                            <p class="project-desc">Sistema de reserva de salas com comunicação TCP e persistência local.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">C#</li>
+                                    <li class="tag">WinForms</li>
+                                    <li class="tag">TCP</li>
+                                    <li class="tag">SQLite</li>
+                                </ul>
+                                <span class="project-status project-status--academic">acadêmico</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="project-row">
+                        <div class="project-main">
+                            <h3 class="project-title">CornHub</h3>
+                            <p class="project-desc">Sistema de reserva de cinema com arquitetura MVC.</p>
+                            <div class="project-meta">
+                                <ul class="project-stack" role="list">
+                                    <li class="tag">PHP</li>
+                                    <li class="tag">MVC</li>
+                                </ul>
+                                <span class="project-status project-status--academic">acadêmico</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===== RFC-0005: skills ===== -->
+        <section class="rfc-section">
+            <header class="rfc-header">
+                <span class="rfc-number">RFC-0005</span>
+                <h2 class="rfc-title">Skills</h2>
+            </header>
+            <div class="rfc-body">
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Backend</h3>
+                        <ul class="skill-list" role="list">
+                            <li>PHP</li>
+                            <li>Laravel</li>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>C#</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Frontend</h3>
+                        <ul class="skill-list" role="list">
+                            <li>React</li>
+                            <li>JavaScript</li>
+                            <li>HTML5</li>
+                            <li>CSS3</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Desktop</h3>
+                        <ul class="skill-list" role="list">
+                            <li>Rust</li>
+                            <li>Tauri</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Banco de dados</h3>
+                        <ul class="skill-list" role="list">
+                            <li>MySQL</li>
+                            <li>MariaDB</li>
+                            <li>SQLite</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Infraestrutura</h3>
+                        <ul class="skill-list" role="list">
+                            <li>Docker</li>
+                            <li>Proxmox</li>
+                            <li>Nginx Proxy Manager</li>
+                            <li>pfSense</li>
+                            <li>MikroTik</li>
+                            <li>WireGuard</li>
+                            <li>Active Directory / PowerShell</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">Segurança</h3>
+                        <ul class="skill-list" role="list">
+                            <li>GoPhish</li>
+                            <li>Conscientização de segurança</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3 class="skill-category-title">DevOps / AI tooling</h3>
+                        <ul class="skill-list" role="list">
+                            <li>Claude Code</li>
+                            <li>opencode</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== RFC-0006: estudos (colapsado) ===== -->
+        <details class="rfc-collapsed rfc-section">
+            <summary>
+                <span><span class="rfc-number">RFC-0006</span> Estudos antigos &amp; cursos</span>
+            </summary>
+            <div class="rfc-body">
                 <div>
-                    <h2>Meus projetos de estudo</h2>
-                    <h3>Projetos desenvolvidos durante meus estudos com HTML, CSS e JavaScript</h3>
-                    <ul class="project-list">
-                        <li>
-                            <a href="https://laravinicius.github.io/NLW-Copa/" target="_blank">&#x1F517 NLW-Copa</a>
-                            <p>Projeto de um calendário dos jogos da Copa do mundo, feito na NLW 10 da <a href="https://www.rocketseat.com.br/" target="_blank">&#x1F517 Rocketseat</a>.</p>
+                    <h3 class="skill-category-title">Projetos desenvolvidos durante meus estudos com HTML, CSS e JavaScript</h3>
+                    <ul class="project-grid" role="list">
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">NLW-Copa</h4>
+                                <p class="project-desc">Calendário dos jogos da Copa do Mundo, feito na NLW 10 da <a href="https://www.rocketseat.com.br/" target="_blank" rel="noopener noreferrer">Rocketseat</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://laravinicius.github.io/NLW-Copa/" target="_blank" rel="noopener noreferrer">ver projeto ↗</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://laravinicius.github.io/NLW-eSports/" target="_blank">&#x1F517 NLW-eSports</a>
-                            <p>Projeto de um catálogo de games e streamers, feito na NLW 9 da <a href="https://www.rocketseat.com.br/" target="_blank">&#x1F517 Rocketseat</a>.</p>
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">NLW-eSports</h4>
+                                <p class="project-desc">Catálogo de games e streamers, feito na NLW 9 da <a href="https://www.rocketseat.com.br/" target="_blank" rel="noopener noreferrer">Rocketseat</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://laravinicius.github.io/NLW-eSports/" target="_blank" rel="noopener noreferrer">ver projeto ↗</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://laravinicius.github.io/projeto_login/" target="_blank">&#x1F517 Projeto tela de login</a>
-                            <p>Projeto de uma tela de login, que se adapta ao dispositivo no qual é acessado, feito a partir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">Projeto tela de login</h4>
+                                <p class="project-desc">Tela de login que se adapta ao dispositivo, feita no curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank" rel="noopener noreferrer">Curso em Vídeo</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://laravinicius.github.io/projeto_login/" target="_blank" rel="noopener noreferrer">ver projeto ↗</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://laravinicius.github.io/projeto_hora_do_dia/" target="_blank">&#x1F517 Hora do Dia</a>
-                            <p>Projeto que mostra o horário atual com uma imagem de fundo, que muda de forma dinâmica dependendo do horário. Feito a partir do curso de JavaScript do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">Hora do Dia</h4>
+                                <p class="project-desc">Mostra o horário atual com imagem de fundo dinâmica. Feito no curso de JavaScript do <a href="https://youtube.com/cursoemvideo" target="_blank" rel="noopener noreferrer">Curso em Vídeo</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://laravinicius.github.io/projeto_hora_do_dia/" target="_blank" rel="noopener noreferrer">ver projeto ↗</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://laravinicius.github.io/projeto_redes_sociais/" target="_blank">&#x1F517 Redes Sociais</a>
-                            <p>Projeto que simula um celular com as redes sociais, podendo trocar entre elas. Feito a partir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">Redes Sociais</h4>
+                                <p class="project-desc">Simula um celular com redes sociais alternáveis. Feito no curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank" rel="noopener noreferrer">Curso em Vídeo</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://laravinicius.github.io/projeto_redes_sociais/" target="_blank" rel="noopener noreferrer">ver projeto ↗</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://laravinicius.github.io/projeto-cordel/" target="_blank">&#x1F517 Cordel Moderno</a>
-                            <p>Projeto que ilustra um Cordel de forma moderna. Feito a partir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">Cordel Moderno</h4>
+                                <p class="project-desc">Ilustra um Cordel de forma moderna. Feito no curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank" rel="noopener noreferrer">Curso em Vídeo</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://laravinicius.github.io/projeto-cordel/" target="_blank" rel="noopener noreferrer">ver projeto ↗</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://laravinicius.github.io/projeto-android" target="_blank">&#x1F517 Mascote Android</a>
-                            <p>Projeto de um site simples que conta um pouco sobre a história do mascote do Android. Feito a partir do curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">Mascote Android</h4>
+                                <p class="project-desc">Site sobre a história do mascote do Android. Feito no curso de HTML e CSS do <a href="https://youtube.com/cursoemvideo" target="_blank" rel="noopener noreferrer">Curso em Vídeo</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://laravinicius.github.io/projeto-android" target="_blank" rel="noopener noreferrer">ver projeto ↗</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
-            </section>
-
-            <section>
                 <div>
-                    <h2>Meus estudos</h2>
-                    <h3>Lista de estudos em HTML, CSS e JavaScript.</h3>
-                    <ul>
-                        <li>
-                            <a href="https://github.com/laravinicius/HTML-CSS" target="_blank">&#x1F517 HTML5 e CSS3</a>
-                            <p>Estudos em HTML5 e CSS3 feitos com o professor Gustavo Guanabara do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                    <h3 class="skill-category-title">Lista de estudos em HTML, CSS e JavaScript</h3>
+                    <ul class="project-grid" role="list">
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">HTML5 e CSS3</h4>
+                                <p class="project-desc">Estudos com o professor Gustavo Guanabara do <a href="https://youtube.com/cursoemvideo" target="_blank" rel="noopener noreferrer">Curso em Vídeo</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://github.com/laravinicius/HTML-CSS" target="_blank" rel="noopener noreferrer">ver repositório ↗</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://github.com/laravinicius/javascript_cursoemvideo" target="_blank">&#x1F517 JavaScript</a>
-                            <p>Estudos em JavaScript feitos com o professor Gustavo Guanabara do <a href="https://youtube.com/cursoemvideo" target="_blank">&#x1F517 Curso em Vídeo</a>.</p>
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">JavaScript</h4>
+                                <p class="project-desc">Estudos com o professor Gustavo Guanabara do <a href="https://youtube.com/cursoemvideo" target="_blank" rel="noopener noreferrer">Curso em Vídeo</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://github.com/laravinicius/javascript_cursoemvideo" target="_blank" rel="noopener noreferrer">ver repositório ↗</a>
+                                </div>
+                            </div>
                         </li>
-                        <li>
-                            <a href="https://github.com/laravinicius/Curso_JS" target="_blank">&#x1F517 JavaScript</a>
-                            <p>Estudos avançados em JavaScript com o professor Luiz Otávio Miranda, feitos a partir do <a href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/" target="_blank">&#x1F517 Curso de JavaScript e TypeScript do básico ao avançado 2022</a>.</p>
+                        <li class="project-row">
+                            <div class="project-main">
+                                <h4 class="project-title">JavaScript avançado</h4>
+                                <p class="project-desc">Estudos com o professor Luiz Otávio Miranda, a partir do <a href="https://www.udemy.com/course/curso-de-javascript-moderno-do-basico-ao-avancado/" target="_blank" rel="noopener noreferrer">Curso de JavaScript e TypeScript do básico ao avançado</a>.</p>
+                                <div class="project-meta">
+                                    <a class="project-link" href="https://github.com/laravinicius/Curso_JS" target="_blank" rel="noopener noreferrer">ver repositório ↗</a>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
-            </section>
+            </div>
         </details>
 
-        <section>
-            <div>
-                <h2>Contato</h2>
-                <p>
-                    <a href="mailto:viniciusfelipe501@hotmail.com">viniciusfelipe501@hotmail.com</a>
-                </p>
-                <ul class="socialMedia">
-                    <li>
-                        <a href="https://github.com/laravinicius" target="_blank">
-                            <img src="assets/images/icone-github.png" alt="Link para meu GitHub">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/vinicius-lara-3017771b5/" target="_blank">
-                            <img src="assets/images/icone-linkedin.png" alt="Link para meu LinkedIn">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/u__vine/" target="_blank">
-                            <img src="assets/images/icone-instagram.png" alt="Link para meu Instagram">
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/uVine__" target="_blank">
-                            <img src="assets/images/icone-twitter.png" alt="Link para meu Twitter">
-                        </a>
-                    </li>
-                </ul>
+        <!-- ===== RFC-0007: contato ===== -->
+        <section class="rfc-section">
+            <header class="rfc-header">
+                <span class="rfc-number">RFC-0007</span>
+                <h2 class="rfc-title">Contato</h2>
+            </header>
+            <div class="rfc-body">
+                <div class="contact-grid">
+                    <a class="contact-email" href="mailto:viniciusfelipe501@hotmail.com">viniciusfelipe501@hotmail.com</a>
+                    <ul class="contact-social" role="list">
+                        <li>
+                            <a href="https://github.com/laravinicius" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56 0-.27-.01-1.17-.02-2.12-3.2.7-3.87-1.36-3.87-1.36-.52-1.33-1.28-1.68-1.28-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.75 2.69 1.25 3.34.95.1-.74.4-1.25.72-1.53-2.55-.29-5.23-1.28-5.23-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11.1 11.1 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.25 5.67.41.35.77 1.05.77 2.12 0 1.53-.01 2.76-.01 3.14 0 .31.2.67.8.56A10.52 10.52 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/vinicius-lara-3017771b5/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/u__vine/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41 1.27-.06 1.65-.07 4.85-.07M12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.88 5.88 0 0 0-2.13 1.38A5.88 5.88 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.31.8.72 1.47 1.38 2.13a5.88 5.88 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.88 5.88 0 0 0 2.13-1.38 5.88 5.88 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.88 5.88 0 0 0-1.38-2.13A5.88 5.88 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm7.85-10.4a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/uVine__" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.95 4.57a10 10 0 0 1-2.83.78 4.93 4.93 0 0 0 2.16-2.72 9.86 9.86 0 0 1-3.12 1.19 4.92 4.92 0 0 0-8.38 4.48A13.94 13.94 0 0 1 1.64 3.16a4.92 4.92 0 0 0 1.52 6.57 4.9 4.9 0 0 1-2.23-.62v.06a4.92 4.92 0 0 0 3.95 4.83 4.94 4.94 0 0 1-2.22.08 4.93 4.93 0 0 0 4.6 3.42A9.87 9.87 0 0 1 0 19.54a13.9 13.9 0 0 0 7.55 2.21c9.06 0 14.01-7.5 14.01-14.01 0-.21 0-.42-.02-.63a10 10 0 0 0 2.41-2.54z"/></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <p>© 2026 Vinicius Felipe da Silva Lara · Hospedado no GitHub Pages</p>
+    </footer>
+
     <script src="assets/js/main.js" defer></script>
 </body>
 </html>
