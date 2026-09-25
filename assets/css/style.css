@@ -3,12 +3,12 @@
 /* ===== design tokens ===== */
 
 :root{
-    --bg: #FAFAF8;
-    --surface: #FFFFFF;
-    --surface-alt: #F3F1EC;
+    --bg: #F7F3E8;
+    --surface: #FFFDF5;
+    --surface-alt: #EFE8D8;
     --text: #1A1A2E;
     --text-muted: #6B6B7A;
-    --border: #E8E6E1;
+    --border: #DED6C5;
     --accent: #166534;
     --accent-hover: #14532D;
     --accent-contrast: #FFFFFF;
@@ -43,16 +43,16 @@
 }
 
 [data-theme="light"]{
-    --bg: #FAFAF8;
-    --surface: #FFFFFF;
-    --surface-alt: #F3F1EC;
+    --bg: #F7F3E8;
+    --surface: #FFFDF5;
+    --surface-alt: #EFE8D8;
     --text: #1A1A2E;
     --text-muted: #6B6B7A;
-    --border: #E8E6E1;
+    --border: #DED6C5;
     --accent: #166534;
     --accent-hover: #14532D;
     --accent-contrast: #FFFFFF;
-    --code-bg: #F3F1EC;
+    --code-bg: #EFE8D8;
     --focus: #166534;
     --shadow: 0 4px 16px -8px rgba(26, 26, 46, 0.12);
     --shadow-lg: 0 12px 32px -12px rgba(26, 26, 46, 0.18);
