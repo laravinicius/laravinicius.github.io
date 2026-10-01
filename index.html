@@ -8,60 +8,87 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=3">
     <script>
         (function () {
-            try {
-                var t = localStorage.getItem('laravinicius-theme');
-                if (t !== 'light' && t !== 'dark') {
-                    t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-                }
-                document.documentElement.setAttribute('data-theme', t);
-            } catch (e) {}
+            var t;
+            try { t = localStorage.getItem('laravinicius-theme'); } catch (e) {}
+            if (t !== 'light' && t !== 'dark') {
+                t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            document.documentElement.setAttribute('data-theme', t);
         })();
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="assets/css/style.css">
+    <noscript><style>.theme-toggle { display: none; }</style></noscript>
 </head>
 <body>
-    <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
-        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"/>
-            <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
-        </svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-        </svg>
-    </button>
-
-    <main class="main">
-
-        <!-- ===== hero: terminal ===== -->
-        <section class="terminal-hero" aria-label="Apresentação">
-            <div class="terminal-avatar">
-                <img src="assets/images/vinicius-228.jpeg" alt="Foto de perfil de Vinicius Felipe da Silva Lara">
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+    <header class="site-header">
+        <nav class="floating-nav" aria-label="Navegação principal">
+            <a class="nav-brand" href="#inicio">Vinicius Lara<span class="brand-dot" aria-hidden="true"></span></a>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Alternar tema" aria-pressed="false">
+                    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+                        <circle cx="12" cy="12" r="4"/>
+                        <path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+                    </svg>
+                    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <details class="nav-menu" id="nav-menu">
+                    <summary aria-label="Abrir menu de navegação" aria-controls="nav-links">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="19" cy="12" r="1.5"/></svg>
+                    </summary>
+                    <div class="nav-links" id="nav-links">
+                        <a href="#inicio">Início <span aria-hidden="true">↗</span></a>
+                        <a href="#sobre">Sobre <span aria-hidden="true">↗</span></a>
+                        <a href="#projetos">Projetos <span aria-hidden="true">↗</span></a>
+                        <a href="#infraestrutura">Infraestrutura <span aria-hidden="true">↗</span></a>
+                        <a href="#skills">Skills <span aria-hidden="true">↗</span></a>
+                        <a href="#contato">Contato <span aria-hidden="true">↗</span></a>
+                    </div>
+                </details>
             </div>
-            <div class="terminal-header">
-                <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <span class="terminal-title">vinicius@laravinicius.github.io:~</span>
-            </div>
-            <div class="terminal-body">
-                <p class="terminal-prompt"><span class="cmd">whoami</span></p>
-                <h1 class="terminal-name">Vinicius Felipe da Silva Lara</h1>
-                <p class="terminal-prompt"><span class="cmd">role</span></p>
-                <p class="terminal-output">
-                    <span class="terminal-typed" id="typed-role">Analista de TI / Desenvolvedor Full-stack</span><span class="cursor" aria-hidden="true"></span>
-                </p>
-                <p class="sr-only">Analista de TI e desenvolvedor full-stack.</p>
-                <noscript><p class="terminal-output" style="color: var(--text-muted);">PHP · Laravel · React · Node.js · Docker · Proxmox · pfSense</p></noscript>
+        </nav>
+    </header>
+
+    <main class="main" id="conteudo">
+
+        <section class="hero" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-topline"><span>Desenvolvimento · Infraestrutura · Automação</span><span>Portfólio / 2026</span></div>
+            <h1 class="hero-title" id="hero-title"><span>ANALISTA DE TI</span><span>FULL-STACK<svg class="hero-star" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 0C55 32 68 45 100 50C68 55 55 68 50 100C45 68 32 55 0 50C32 45 45 32 50 0Z"/></svg></span></h1>
+            <div class="hero-bottom">
+                <div class="hero-identity">
+                    <p class="eyebrow">Olá, sou</p>
+                    <p class="hero-name">Vinicius Felipe<br>da Silva Lara.</p>
+                    <p class="hero-role">Analista de TI / Desenvolvedor Full-stack</p>
+                </div>
+                <figure class="hero-portrait">
+                    <div class="hero-portrait-frame" aria-hidden="true"></div>
+                    <figcaption>Vinicius Lara / TI & Desenvolvimento</figcaption>
+                </figure>
+                <div class="hero-intro">
+                    <p>Sistemas internos, infraestrutura, redes e automação.</p>
+                    <div class="hero-links">
+                        <a class="button button-primary" href="#projetos">Ver projetos <span aria-hidden="true">↗</span></a>
+                        <a class="text-link" href="#contato">Entrar em contato <span aria-hidden="true">↗</span></a>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- ===== RFC-0001: sobre ===== -->
-        <section class="rfc-section">
+        <section class="rfc-section" id="sobre">
             <header class="rfc-header">
-                <h2 class="rfc-title">Sobre mim</h2>
+                <p class="eyebrow">01 / Sobre mim</p>
+                <h2 class="rfc-title">Olá!</h2>
             </header>
-            <div class="rfc-body">
+            <figure class="about-portrait">
+                <img class="portrait-image" src="assets/images/vinicius.jpeg" width="960" height="960" alt="Vinicius Felipe da Silva Lara" fetchpriority="high">
+            </figure>
+            <div class="rfc-body about-copy">
                 <p class="lead">
                     Atuo como analista de TI e desenvolvedor full-stack, cuidando de infraestrutura, redes e sistemas
                     internos em produção.
@@ -74,13 +101,15 @@
         </section>
 
         <!-- ===== RFC-0002: projetos profissionais ===== -->
-        <section class="rfc-section">
+        <section class="rfc-section" id="projetos">
             <header class="rfc-header">
-                <h2 class="rfc-title">Projetos profissionais</h2>
+                <p class="eyebrow">02 / Projetos profissionais</p>
+                <h2 class="rfc-title">Projetos<br>profissionais.</h2>
             </header>
             <div class="rfc-body">
-                <ul class="project-grid" role="list">
+                <ul class="project-grid professional-grid" role="list">
                     <li class="project-row">
+                        <a class="project-cover cover-pharma" href="https://github.com/laravinicius/pharmaflow" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto PharmaFlow (abre em nova aba)"><span class="cover-label">01 / Desktop</span><div class="cover-art"><svg viewBox="0 0 200 200"><path d="M70 25h60v45h45v60h-45v45H70v-45H25V70h45z"/><circle cx="100" cy="100" r="90"/></svg></div><span class="cover-name">PharmaFlow</span><span class="cover-arrow">↗</span></a>
                         <div class="project-main">
                             <h3 class="project-title">PharmaFlow</h3>
                             <p class="project-desc">Aplicação desktop online-first para gerenciamento do fluxo de manipulação farmacêutica.</p>
@@ -91,6 +120,7 @@
                         </div>
                     </li>
                     <li class="project-row">
+                        <a class="project-cover cover-restrito" href="https://restrito.microgateinformatica.com.br" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto Restrito Microgate (abre em nova aba)"><span class="cover-label">02 / Sistema web</span><div class="cover-art"><svg viewBox="0 0 200 200"><rect x="25" y="40" width="150" height="140" rx="12"/><path d="M25 80h150M65 20v40M135 20v40M55 110h20m25 0h20m25 0h5M55 140h20m25 0h20"/></svg></div><span class="cover-name">Restrito<br>Microgate</span><span class="cover-arrow">↗</span></a>
                         <div class="project-main">
                             <h3 class="project-title">Restrito Microgate</h3>
                             <p class="project-desc">Agendamento de técnicos e controle de KM, com visualização em WebView Android.</p>
@@ -101,6 +131,7 @@
                         </div>
                     </li>
                     <li class="project-row">
+                        <a class="project-cover cover-microgate" href="https://microgateinformatica.com.br" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto Site Microgate (abre em nova aba)"><span class="cover-label">03 / Website</span><div class="cover-art"><svg viewBox="0 0 200 200"><circle cx="100" cy="100" r="80"/><ellipse cx="100" cy="100" rx="35" ry="80"/><path d="M20 100h160M35 55h130M35 145h130"/></svg></div><span class="cover-name">Site<br>Microgate</span><span class="cover-arrow">↗</span></a>
                         <div class="project-main">
                             <h3 class="project-title">Site Microgate</h3>
                             <p class="project-desc">Site institucional da Microgate.</p>
@@ -109,6 +140,7 @@
                         </div>
                     </li>
                     <li class="project-row">
+                        <a class="project-cover cover-topologia" href="https://topologia.microgateinformatica.com.br" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto Topologia (abre em nova aba)"><span class="cover-label">04 / Infraestrutura</span><div class="cover-art"><svg viewBox="0 0 200 200"><path d="M100 40v60M40 145l60-45 60 45"/><circle cx="100" cy="30" r="20"/><circle cx="100" cy="100" r="20"/><circle cx="30" cy="155" r="20"/><circle cx="170" cy="155" r="20"/></svg></div><span class="cover-name">Topologia</span><span class="cover-arrow">↗</span></a>
                         <div class="project-main">
                             <h3 class="project-title">Topologia</h3>
                             <p class="project-desc">Ferramenta de mapeamento de infraestrutura, com atualizações em tempo real via SSE e arquitetura multi-tenant.</p>
@@ -119,6 +151,7 @@
                         </div>
                     </li>
                     <li class="project-row">
+                        <a class="project-cover cover-compras" href="https://compras.microgateinformatica.com.br" target="_blank" rel="noopener noreferrer" aria-label="Ver projeto Compras (abre em nova aba)"><span class="cover-label">05 / Sistema web</span><div class="cover-art"><svg viewBox="0 0 200 200"><path d="M35 60h130l-15 90H50zM70 75V50a30 30 0 0 1 60 0v25"/><path d="M75 110h50M100 85v50"/></svg></div><span class="cover-name">Compras</span><span class="cover-arrow">↗</span></a>
                         <div class="project-main">
                             <h3 class="project-title">Compras</h3>
                             <p class="project-desc">Sistema de compras da Microgate.</p>
@@ -130,9 +163,10 @@
             </div>
         </section>
         <!-- ===== RFC-0003: infra & homelab ===== -->
-        <section class="rfc-section">
+        <section class="rfc-section" id="infraestrutura">
 <header class="rfc-header">
-                <h2 class="rfc-title">Infraestrutura & Homelab</h2>
+                <p class="eyebrow">03 / Infraestrutura</p>
+                <h2 class="rfc-title">Infraestrutura<br>& Homelab.</h2>
             </header>
             <div class="rfc-body">
                 <p>Stack self-hosted que utilizo para estudos, testes e automações do dia a dia:</p>
@@ -177,8 +211,9 @@
         </section>
 
         <!-- ===== RFC-0004: projetos acadêmicos ===== -->
-        <section class="rfc-section">
+        <section class="rfc-section" id="academicos">
             <header class="rfc-header">
+                <p class="eyebrow">04 / Projetos acadêmicos</p>
                 <h2 class="rfc-title">Projetos acadêmicos</h2>
             </header>
             <div class="rfc-body">
@@ -216,8 +251,9 @@
         </section>
 
         <!-- ===== RFC-0005: skills ===== -->
-        <section class="rfc-section">
+        <section class="rfc-section" id="skills">
             <header class="rfc-header">
+                <p class="eyebrow">05 / Conhecimento</p>
                 <h2 class="rfc-title">Skills</h2>
             </header>
             <div class="rfc-body">
@@ -287,9 +323,9 @@
         </section>
 
         <!-- ===== RFC-0006: estudos (colapsado) ===== -->
-<details class="rfc-collapsed rfc-section">
+<details class="rfc-collapsed rfc-section" id="estudos">
             <summary>
-                <span>Estudos antigos & cursos</span>
+                <span><span class="eyebrow">Arquivo / Aprendizado</span>Estudos antigos & cursos</span>
             </summary>
             <div class="rfc-body">
                 <div>
@@ -396,9 +432,10 @@
         </details>
 
         <!-- ===== RFC-0007: contato ===== -->
-        <section class="rfc-section">
+        <section class="rfc-section" id="contato">
             <header class="rfc-header">
-                <h2 class="rfc-title">Contato</h2>
+                <p class="eyebrow">06 / Contato</p>
+                <h2 class="rfc-title">Vamos<br>conversar?</h2>
             </header>
             <div class="rfc-body">
                 <div class="contact-grid">
@@ -431,6 +468,7 @@
     </main>
 
     <footer class="footer">
+        <a class="footer-wordmark" href="#inicio" aria-label="Voltar ao início">VINICIUS LARA</a>
         <p>© 2026 Vinicius Felipe da Silva Lara · Hospedado no GitHub Pages</p>
     </footer>
 
